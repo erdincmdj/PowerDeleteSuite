@@ -1,216 +1,78 @@
 var pd = {
   version: "1.4.11",
   bookmarkver: "1.4",
-  editStrings: [
-    "I love ice cream.",
-    "I hate beer.",
-    "My favorite color is blue.",
-    "I enjoy reading books.",
-    "I like to go hiking.",
-    "My favorite movie is Inception.",
-    "I enjoy playing video games.",
-    "I like to travel.",
-    "I'm learning to play the guitar.",
-    "I enjoy cooking.",
-    "I love listening to music.",
-    "I enjoy watching the sunset.",
-    "I like to explore new places.",
-    "I find joy in reading a good book.",
-    "I appreciate a good cup of coffee.",
-    "I enjoy spending time with my friends.",
-    "I like learning new things.",
-    "I find peace in long walks.",
-    "I enjoy the sound of rain.",
-    "I love the smell of fresh bread.",
-    "random string 1",
-    "random string 2",
-    "I like watching movies.",
-    "I enjoy learning new languages.",
-    "I love painting.",
-    "I find joy in gardening.",
-    "I like baking cookies.",
-    "I enjoy swimming in the ocean.",
-    "My favorite hobby is photography.",
-    "I like playing chess.",
-    "I enjoy going to the gym.",
-    "I love spending time with family.",
-    "I like riding my bike.",
-    "I enjoy writing stories.",
-    "My favorite sport is basketball.",
-    "I like solving puzzles.",
-    "I enjoy camping in the mountains.",
-    "I love taking nature walks.",
-    "I like listening to podcasts.",
-    "I enjoy doing yoga.",
-    "My favorite season is autumn.",
-    "I like playing board games.",
-    "I enjoy star gazing.",
-"I love watching documentaries.",
-"I like making crafts.",
-"I enjoy attending concerts.",
-"My favorite food is sushi.",
-"I like trying new restaurants.",
-"I enjoy going to the beach.",
-"I love practicing mindfulness.",
-"I like learning about history.",
-"I enjoy playing the piano.",
-"My favorite drink is tea.",
-"I like volunteering in my community.",
-"I enjoy visiting museums.",
-"I love taking road trips.",
-"I like working on DIY projects.",
-"I enjoy playing with my pets.",
-"My favorite dessert is cheesecake.",
-"I like listening to audiobooks.",
-"I enjoy doing crossword puzzles.",
-"I love spending time in nature.",
-"I like visiting art galleries.",
-"I enjoy attending theater plays.",
-"My favorite flower is the sunflower.",
-"I like practicing meditation.",
-"I enjoy cooking new recipes.",
-"I love exploring national parks.",
-"I like collecting stamps.",
-"I enjoy attending festivals.",
-"My favorite tree is the oak.",
-"I like gardening in my backyard.",
-"I enjoy learning new skills.",
-"I love making pottery.",
-"I like watching wildlife.",
-"I enjoy going to farmers markets.",
-"My favorite animal is the dolphin.",
-"I like playing tennis.",
-"I enjoy going on picnics.",
-"I love watching the stars.",
-"I like bird watching.",
-"I enjoy making jewelry.",
-"My favorite place is the mountains.",
-"I like trying new hobbies.",
-"I enjoy going on adventures.",
-    "I love sailing on the lake.",
-"I like attending sports events.",
-"I enjoy taking dance classes.",
-"My favorite book is Pride and Prejudice.",
-"I like doing photography walks.",
-"I enjoy visiting historical sites.",
-"I love learning about astronomy.",
-"I like playing with children.",
-"I enjoy taking bubble baths.",
-"My favorite band is The Beatles.",
-"I like creating digital art.",
-"I enjoy practicing archery.",
-"I love watching animated movies.",
-"I like doing science experiments.",
-"I enjoy learning about marine life.",
-"My favorite snack is popcorn.",
-"I like building model airplanes.",
-"I enjoy doing tai chi.",
-"I love attending wine tastings.",
-"I like knitting scarves.",
-"I enjoy going to amusement parks.",
-"My favorite TV show is Friends.",
-"I like making homemade gifts.",
-"I enjoy exploring caves.",
-"I love listening to classical music.",
-"I like making soap.",
-"I enjoy trying new cuisines.",
-"My favorite superhero is Spider-Man.",
-"I like going to book clubs.",
-"I enjoy doing escape rooms.",
-"I love learning about different cultures.",
-"I like practicing calligraphy.",
-"I enjoy attending art workshops.",
-"My favorite fruit is mango.",
-"I like making candles.",
-"I enjoy playing frisbee.",
-"I love visiting botanical gardens.",
-"I like going to the zoo.",
-"I enjoy watching ballet.",
-"My favorite author is J.K. Rowling.",
-"I like practicing magic tricks.",
-"I enjoy rock climbing.",
-"I love learning about physics.",
-"I like doing community service.",
-"I enjoy making flower arrangements.",
-"My favorite comedian is Robin Williams.",
-"I like doing woodwork.",
-"I enjoy going on nature hikes.",
-"I love listening to jazz.",
-"I like playing with Legos.",
-"I enjoy attending live shows.",
-"My favorite instrument is the violin.",
-"I like learning new software.",
-"I enjoy doing pottery classes.",
-"I love participating in trivia nights.",
-"I like going to the planetarium.",
-"I enjoy learning about geology.",
-"My favorite holiday is Christmas.",
-"I like watching foreign films.",
-"I enjoy writing poetry.",
-"I love exploring abandoned places.",
-    "I like practicing martial arts.",
-"I enjoy doing mindfulness exercises.",
-"I love learning about space exploration.",
-"I like going to flea markets.",
-"I enjoy collecting vintage items.",
-"My favorite painter is Van Gogh.",
-"I like making origami.",
-"I enjoy going to car shows.",
-"I love learning about ancient civilizations.",
-"I like watching magic shows.",
-"I enjoy doing jigsaw puzzles.",
-"My favorite vegetable is broccoli.",
-"I like attending science fairs.",
-"I enjoy playing card games.",
-"I love visiting aquariums.",
-"I like practicing playing drums.",
-"I enjoy making scrapbooks.",
-"My favorite poet is Robert Frost.",
-"I like visiting bookstores.",
-"I enjoy doing improv comedy.",
-"I love learning about psychology.",
-"I like attending lectures.",
-"I enjoy going on scenic drives.",
-"My favorite cuisine is Italian.",
-"I like creating comic strips.",
-"I enjoy going to the opera.",
-"I love watching musicals.",
-"I like practicing parkour.",
-"I enjoy learning about architecture.",
-"My favorite drink is hot chocolate.",
-"I like attending workshops.",
-"I enjoy playing darts.",
-"I love exploring forests.",
-"I like learning about meteorology.",
-"I enjoy going to the circus.",
-"My favorite gemstone is sapphire.",
-"I like practicing public speaking.",
-"I enjoy doing charity work.",
-"I love watching wildlife documentaries.",
-"I like learning about mythology.",
-"I enjoy doing metalworking.",
-"My favorite planet is Saturn.",
-"I like creating graphic designs.",
-"I enjoy going to comedy clubs.",
-"I love learning about economics.",
-"I like making quilts.",
-"I enjoy going to music festivals.",
-"My favorite sculpture is The Thinker.",
-"I like practicing yoga.",
-"I enjoy attending cultural festivals.",
-"I love learning about world history.",
-"I like visiting libraries.",
-"I enjoy doing voice acting.",
-"My favorite dance is the tango.",
-"I like making paper crafts.",
-"I enjoy going to food tastings.",
-"I love learning about anthropology.",
-"I like attending art exhibitions.",
-"I enjoy going to street fairs.",
-"My favorite insect is the butterfly.",
-"I like creating video content.",
-"I enjoy participating in hackathons."
-  ],
+  generateRandomPhrase: function() {
+    //thanks to http://stackoverflow.com/a/4709034
+    var verbs = [
+      ["go to", "goes to", "going to", "went to", "gone to"],
+      ["look at", "looks at", "looking at", "looked at", "looked at"],
+      ["choose", "chooses", "choosing", "chose", "chosen"]
+    ];
+    var tenses = [
+      {
+        name: "Present",
+        singular: 1,
+        plural: 0,
+        format: "%subject %verb %complement"
+      },
+      {
+        name: "Past",
+        singular: 3,
+        plural: 3,
+        format: "%subject %verb %complement"
+      },
+      {
+        name: "Present Continues",
+        singular: 2,
+        plural: 2,
+        format: "%subject %be %verb %complement"
+      }
+    ];
+    var subjects = [
+      { name: "I", be: "am", singular: 0 },
+      { name: "You", be: "are", singular: 0 },
+      { name: "He", be: "is", singular: 1 }
+    ];
+    var complementsForVerbs = [
+      ["cinema", "park", "home", "concert"],
+      ["for a map", "them", "the stars", "the lake"],
+      ["a book for reading", "a dvd for tonight"]
+    ];
+  
+    Array.prototype.random = function () {
+      return this[Math.floor(Math.random() * this.length)];
+    };
+  
+    function generate() {
+      var index = Math.floor(verbs.length * Math.random());
+      var tense = tenses.random();
+      var subject = subjects.random();
+      var verb = verbs[index];
+      var complement = complementsForVerbs[index];
+      var str = tense.format;
+      str = str.replace("%subject", subject.name).replace("%be", subject.be);
+      str = str.replace(
+        "%verb",
+        verb[subject.singular ? tense.singular : tense.plural]
+      );
+      str = str.replace("%complement", complement.random());
+      return str;
+    }
+  
+    return generate();
+  },
+  __waitMs: (ms) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(resolve, ms);
+    });
+  },
+  waitRandom: () => {
+    const randomIntFromInterval = (min, max) => { // min and max included 
+      return Math.floor(Math.random() * (max - min + 1) + min)
+    };
+
+    return pd.__waitMs(Math.max(1000 * randomIntFromInterval(5, 7), 5100));
+  },
   init: function () {
     pd.checks.versions();
     if (window.pd_processing !== true) {
@@ -328,7 +190,7 @@ var pd = {
     },
     applyStyles: function () {
       $.ajax({
-        url: "https://raw.githubusercontent.com/mykola2312/PowerDeleteSuite/master/stylesheet.json",
+        url: "https://raw.githubusercontent.com/erdincmdj/PowerDeleteSuite/master/stylesheet.json",
         context: $("#pd__style"),
       }).then(
         function (data) {
@@ -792,13 +654,17 @@ var pd = {
             (item.data.is_self || item.kind == "t1") &&
             pd.task.config.isEditing
           ) {
-            pd.actions.edit(item);
+            pd.waitRandom().then(() => {
+              pd.actions.edit(item); 
+            });
           } else if (
             !item.pdDeleted &&
             ((item.kind == "t3" && pd.task.config.isRemovingPosts) ||
               (item.kind == "t1" && pd.task.config.isRemovingComments))
           ) {
-            pd.actions.delete(item);
+            pd.waitRandom().then(() => {
+              pd.actions.delete(item);
+            });
           } else {
             pd.actions.children.finishItem();
             pd.actions.children.handleGroup();
@@ -872,85 +738,80 @@ var pd = {
       },
     },
     delete: function (item) {
-      setTimeout(() => {
-        if (pd.performActions) {
-          $.ajax({
-            url: "/api/del",
-            method: "post",
-            data: {
-              id: item.data.name,
-              executed: "deleted",
-              uh: pd.config.uh,
-              renderstyle: "html",
-            },
-          }).then(
-            function () {
-              pd.task.items[0].pdDeleted = true;
+      if (pd.performActions) {
+        $.ajax({
+          url: "/api/del",
+          method: "post",
+          data: {
+            id: item.data.name,
+            executed: "deleted",
+            uh: pd.config.uh,
+            renderstyle: "html",
+          },
+        }).then(
+          function () {
+            pd.task.items[0].pdDeleted = true;
+            pd.actions.children.handleSingle();
+          },
+          function () {
+            pd.task.info.errors++;
+            if (
+              confirm(
+                "Error deleting " +
+                  (item.kind == "t3" ? "post" : "comment") +
+                  ", would you like to retry?"
+              )
+            ) {
               pd.actions.children.handleSingle();
-            },
-            function () {
-              pd.task.info.errors++;
-              if (
-                confirm(
-                  "Error deleting " +
-                    (item.kind == "t3" ? "post" : "comment") +
-                    ", would you like to retry?"
-                )
-              ) {
-                pd.actions.children.handleSingle();
-              } else {
-                pd.actions.children.finishItem();
-                pd.actions.children.handleGroup();
-              }
+            } else {
+              pd.actions.children.finishItem();
+              pd.actions.children.handleGroup();
             }
-          );
-        } else {
-          pd.task.items[0].pdDeleted = true;
-          pd.task.after = pd.task.items[0].data.name;
-          pd.actions.children.handleSingle();
-        }
-      }, 5000);
+          }
+        );
+      } else {
+        pd.task.items[0].pdDeleted = true;
+        pd.task.after = pd.task.items[0].data.name;
+        pd.actions.children.handleSingle();
+      }
     },
     edit: function (item) {
-      setTimeout(() => {
-        if (pd.performActions) {
-          var editString = pd.task.config.editText ||
-            pd.editStrings[Math.floor(Math.random() * pd.editStrings.length)];
-          $.ajax({
-            url: "/api/editusertext",
-            method: "post",
-            data: {
-              thing_id: item.data.name,
-              text: editString,
-              id: "#form-" + item.data.name,
-              r: item.data.subreddit,
-              uh: pd.config.uh,
-              renderstyle: "html",
-            },
-          }).then(
-            function () {
-              pd.task.items[0].pdEdited = true;
-              pd.actions.children.handleSingle();
-            },
-            function () {
-              pd.task.info.errors++;
-              if (
-                !confirm(
-                  "Error editing " +
-                    (item.kind == "t3" ? "post" : "comment") +
-                    ", would you like to retry?"
-                )
-              ) {
-                item.pdEdited = true;
-              }
-              pd.actions.children.handleSingle();
+      if (pd.performActions) {
+        var editString = pd.task.config.editText || pd.generateRandomPhrase();
+        $.ajax({
+          url: "/api/editusertext",
+          method: "post",
+          data: {
+            thing_id: item.data.name,
+            text: editString,
+            id: "#form-" + item.data.name,
+            r: item.data.subreddit,
+            uh: pd.config.uh,
+            renderstyle: "html",
+          },
+        }).then(
+          function () {
+            pd.task.items[0].pdEdited = true;
+            pd.actions.children.handleSingle();
+          },
+          function () {
+            pd.task.info.errors++;
+            if (
+              !confirm(
+                "Error editing " +
+                  (item.kind == "t3" ? "post" : "comment") +
+                  ", would you like to retry?"
+              )
+            ) {
+              item.pdEdited = true;
             }
-          );
-        } else {
-          pd.task.items[0].pdEdited = true;
-          pd.actions.children.handleSingle();
-        }
-      }, 5000);
+            pd.actions.children.handleSingle();
+          }
+        );
+      } else {
+        pd.task.items[0].pdEdited = true;
+        pd.actions.children.handleSingle();
+      }
     },
   },
   ui: {
