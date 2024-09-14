@@ -66,12 +66,12 @@ var pd = {
       setTimeout(resolve, ms);
     });
   },
-  waitRandom: () => {
+  waitRandom: (isCrud) => {
     const randomIntFromInterval = (min, max) => { // min and max included 
       return Math.floor(Math.random() * (max - min + 1) + min)
     };
 
-    const waitInterval = Math.max(1000 * randomIntFromInterval(5, 7), 5100);
+    const waitInterval = isCrud ? Math.max(1000 * randomIntFromInterval(5, 7), 5100) : 1000 * randomIntFromInterval(2, 7);
     console.log(`Waiting ${waitInterval} seconds!`);
 
     return pd.__waitMs(waitInterval);
@@ -646,7 +646,7 @@ var pd = {
             (item.data.is_self || item.kind == "t1") &&
             pd.task.config.isEditing
           ) {
-            pd.waitRandom().then(() => {
+            pd.waitRandom(true).then(() => {
               pd.actions.edit(item); 
             });
           } else if (
@@ -654,7 +654,7 @@ var pd = {
             ((item.kind == "t3" && pd.task.config.isRemovingPosts) ||
               (item.kind == "t1" && pd.task.config.isRemovingComments))
           ) {
-            pd.waitRandom().then(() => {
+            pd.waitRandom(true).then(() => {
               pd.actions.delete(item);
             });
           } else {
