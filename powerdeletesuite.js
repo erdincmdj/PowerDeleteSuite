@@ -71,7 +71,10 @@ var pd = {
       return Math.floor(Math.random() * (max - min + 1) + min)
     };
 
-    return pd.__waitMs(Math.max(1000 * randomIntFromInterval(5, 7), 5100));
+    const waitInterval = Math.max(1000 * randomIntFromInterval(5, 7), 5100);
+    console.log(`Waiting ${waitInterval} seconds!`);
+
+    return pd.__waitMs(waitInterval);
   },
   init: function () {
     pd.checks.versions();
@@ -306,7 +309,6 @@ var pd = {
           isRemovingPosts: $("#pd__submissions").is(":checked"),
           isRemovingComments: $("#pd__comments").is(":checked"),
           isEditing: $("#pd__comments-edit").is(":checked"),
-          editText: $("#pd__comments-edit-text").val(),
         },
         paths: {
           sections:
@@ -412,17 +414,7 @@ var pd = {
   },
   helpers: {
     validate: function () {
-      if (pd.task.config.isEditing && pd.task.config.editText === "") {
-        var confirmEmptyEdit = window.confirm(
-          "You have not entered any text to edit your posts to; junk text will be used instead."
-        );
-        return {
-          valid: !!confirmEmptyEdit,
-          reason:
-            confirmEmptyEdit ? "valid" :
-            "Please enter something to edit your comments / self posts to.",
-        };
-      } else if (pd.filters.score && $("#pd_score-num").val() === "") {
+      if (pd.filters.score && $("#pd_score-num").val() === "") {
         return { valid: false, reason: "Please enter a score to filter with." };
       } else if (
         !(
@@ -777,7 +769,7 @@ var pd = {
     },
     edit: function (item) {
       if (pd.performActions) {
-        var editString = pd.task.config.editText || pd.generateRandomPhrase();
+        var editString = pd.generateRandomPhrase();
         $.ajax({
           url: "/api/editusertext",
           method: "post",
