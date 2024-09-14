@@ -529,7 +529,7 @@ var pd = {
         }
         if (pd.task.paths.sections.length > 0) {
           pd.ui.updateDisplay();
-          pd.actions.page.handle();
+          pd.waitRandom().then(() => pd.actions.page.handle());
         } else {
           pd.ui.done();
         }
@@ -599,7 +599,7 @@ var pd = {
                 )
               ) {
                 pd.actions.page.shift();
-                pd.actions.page.handle();
+                pd.waitRandom().then(() => pd.actions.page.handle());
               } else {
                 pd.ui.done();
               }
@@ -614,7 +614,7 @@ var pd = {
                   " page. Would you like to retry?"
               )
             ) {
-              pd.actions.page.handle();
+              pd.waitRandom().then(() => pd.actions.page.handle());
             } else {
               pd.actions.page.shift();
               pd.actions.page.next();
